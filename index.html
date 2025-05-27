@@ -3,36 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="assets/logoonly.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sen:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Sen:wght@400..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <title>Timeline</title>
 </head>
-<body>
-    <nav onclick="window.location.href = '/index.html';"><img src="/assets/logoonly.png" alt="timeline" class="iconm">Timeline</nav>
-    <div class="container">
-        <div class="acards" onclick="window.location.href = '/posts/kota-besar-kekurangan-anak-muda.html';">
-            <img src="/assets/blogs/blogic4.jpg">
-            <h2>Kota Besar Bukan Lagi Pilihan Utama Generasi Muda</h2>
-            <p>Semakin banyak anak muda di Azlania memilih pindah ke daerah pinggiran atau kota kecil, menghindari tekanan hidup urban dan mencari gaya hidup lebih seimbang.</p>
+<body class="bg-amber-50">
+    <t-header></t-header>
+    <div class="grid grid-cols-1 gap-2 m-8 md:grid-cols-3 lg:gap-5">
+        <div class="md:col-span-2">
+            <t-headlines
+                link="/news/azlania-menuju-energi-hijau.html"
+                img="/assets/img/articles/blog5.webp"
+                head="Azlania Menuju Energi Hijau: Revolusi Tenaga Surya dan Angin"
+                desc="Pemerintah menetapkan target ambisius untuk meningkatkan penggunaan energi terbarukan, dengan investasi besar di tenaga surya dan angin."
+                time="22 Feb 2075"
+            ></t-headlines>
+            <img src="assets/img/ads/second-social-ad.jpg" alt="sponsor">
         </div>
-        <div class="acards" onclick="window.location.href = '/posts/otonomi-wilayah-sinamora.html';">
-            <img src="/assets/blogs/blogic3.jpg">
-            <h2>Kota-Kota Pinggiran Ajukan Tuntutan Otonomi</h2>
-            <p>Dalam beberapa bulan terakhir, tuntutan otonomi dari berbagai wilayah di Azlania semakin menguat, dengan Sinamora sebagai kota yang paling vokal dalam gerakan ini.</p>
-        </div>
-        <div class="acards" onclick="window.location.href = '/posts/krisis-perumahan.html';">
-            <img src="/assets/blogs/blogic2.jpg">
-            <h2>Krisis Perumahan di Azlania</h2>
-            <p>Lonjakan harga properti di kota-kota besar seperti Azal dan Sinamora telah menciptakan krisis perumahan yang semakin membebani warga. Dengan meningkatnya permintaan serta spekulasi pasar yang agresif, banyak orang kesulitan mendapatkan tempat tinggal yang layak.</p>
-        </div>
-        <div class="acards" onclick="window.location.href = '/posts/konflik-tambang-sinamora.html';">
-            <img src="/assets/blogs/blogic1.jpg">
-            <h2>Konflik Tambang Mengguncang Sinamora</h2>
-            <p>Konflik antara Vides Ministrija (Kementerian Lingkungan) dan perusahaan tambang besar di Sinamora, Azlania, semakin memanas akibat regulasi lingkungan yang lebih ketat.</p>
+        <div class="rounded bg-amber-100 p-2">
+            <t-articles
+                link="/news/kota-besar-bukan-lagi-pilihan-utama-generasi-muda.html"
+                head="Kota Besar Bukan Lagi Pilihan Utama Generasi Muda"
+                desc="Semakin banyak anak muda di Azlania memilih pindah ke daerah pinggiran atau kota kecil."
+                time="22 Nov 2074"
+            ></t-articles>
+            <hr>
+            <t-articles
+                link="/news/kota-kota-pinggiran-ajukan-tuntutan-otonomi.html"
+                head="Kota-Kota Pinggiran Ajukan Tuntutan Otonomi"
+                desc="Dalam beberapa bulan terakhir, tuntutan otonomi dari berbagai wilayah di Azlania semakin menguat."
+                time="19 Okt 2074"
+            ></t-articles>
+            <hr>
+            <t-articles
+                link="/news/krisis-perumahan-di-azlania.html"
+                head="Krisis Perumahan di Azlania"
+                desc="Lonjakan harga properti di kota-kota besar seperti Azal dan Sinamora telah menciptakan krisis perumahan."
+                time="20 Apr 2073"
+            ></t-articles>
+            <hr>
+            <t-articles
+                link="/news/konflik-tambang-menguncang-sinamora.html"
+                head="Konflik Tambang Mengguncang Sinamora"
+                desc="Konflik antara Vides Ministrija (Kementerian Lingkungan) dan perusahaan tambang besar di Sinamora, Azlania, semakin memanas akibat regulasi lingkungan yang lebih ketat."
+                time="17 Apr 2073"
+            ></t-articles>
         </div>
     </div>
+    <t-footer></t-footer>
+    <script src="components/header.js"></script>
+    <script src="components/article.js"></script>
+    <script src="components/headline.js"></script>
+    <script src="components/footer.js"></script>
 </body>
 </html>
