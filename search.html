@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Sen:wght@400..800&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Timeline</title>
+</head>
+<body class="bg-amber-50">
+    <t-header></t-header>
+    
+    <label for="Search" class="w-100% m-4 flex justify-center">
+        <input
+            type="search"
+            id="Search"
+            placeholder="Search articles..."
+            class="w-200 rounded border-gray-500 sm:text-sm p-2 font-[Sen] focus:border-emerald-800 focus:border focus:outline-hidden bg-amber-100"
+            data-search
+        />
+    </label>
+    <img src="/assets/img/ads/timeline-ad.jpg" class="m-2">
+    <div class="w-100% grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 m-4 gap-2" data-articles-container>
+      
+    </div>
+    <template data-articles-template>
+        <article class="p-2 rounded bg-amber-100">
+            <a href="" class="hover:underline" data-link>
+                <h2 class="font-[DM_Serif_Text] text-3xl text-emerald-800" data-head></h2>
+                <p class="font-[Tinos] text-justify" data-desc></p>
+            </a>
+            <p class="text-gray-500 font-[Sen]" data-time></p>
+        </article>
+    </template>
+    <t-footer></t-footer>
+    <script src="components/header.js"></script>
+    <script src="components/footer.js"></script>
+    <script src="/get.js" defer></script>
+</body>
+</html>
